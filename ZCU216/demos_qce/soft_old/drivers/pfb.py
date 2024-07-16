@@ -245,12 +245,11 @@ class AxisPfbAnalysis(AbsPfbAnalysis):
     """
     bindto = ['user.org:user:axis_pfb_4x1024_v1:1.0'   ,
               'user.org:user:axis_pfba_pr_4x256_v1:1.0']
+    REGISTERS = {'qout_reg' : 0}
     
     def __init__(self, description):
         # Initialize ip
         super().__init__(description)
-
-        self.REGISTERS = {'qout_reg' : 0}
         
         # Default registers.
         self.qout_reg = 0
@@ -458,12 +457,11 @@ class AxisPfbSynthesis(AbsPfbSynthesis):
     """
     bindto = ['user.org:user:axis_pfbsynth_4x1024_v1:1.0',
               'user.org:user:axis_pfbs_pr_4x256_v1:1.0'  ]
+    REGISTERS = {'qout_reg':0}
     
     def __init__(self, description):
         # Initialize ip
         super().__init__(description)
-
-        self.REGISTERS = {'qout_reg':0}
         
         # Default registers.
         self.qout_reg   = 0
